@@ -1,0 +1,38 @@
+{
+  "server": {
+    "host": "localhost",
+    "port": 37200
+  },
+  "service": {
+    "spacebro":{
+      "host": "spacebro.space",
+      "port": 3333,
+      "channelName": "media-stream",
+      "client": {
+        "name": "themifybro",
+        "description": "Add meta in media based on an online theme",
+        "in": {
+          "inMedia": {
+            "eventName": "inMedia",
+            "description": "Media to process",
+            "type": "all"
+          }
+        },
+        "out": {
+          "outMedia": {
+            "eventName": "outMedia",
+            "description": "processed media",
+            "type": "all"
+          }
+        }
+      }
+    }
+  },
+  "theme": {
+    "baseURL": "https://socialite-demo.estu.la/themes",
+    "isAPI": false
+  },
+  "media": {
+    "meta": {}
+  }
+}

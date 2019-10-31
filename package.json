@@ -1,0 +1,23 @@
+{
+  "name": "rsyncbro",
+  "version": "1.0.0",
+  "description": "A spacebro client to rsync media to a remote device",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "bro",
+    "spacebro",
+    "rsync"
+  ],
+  "author": "Emmanuel Geoffray",
+  "license": "ISC",
+  "dependencies": {
+    "rsync": "^0.6.1",
+    "spacebro-client": "^0.4.5",
+    "standard-settings": "^1.1.11"
+  },
+  "devDependencies": {}
+}
