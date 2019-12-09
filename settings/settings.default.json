@@ -1,16 +1,16 @@
 {
   "server": {
     "host": "localhost",
-    "port": 37200
+    "port": 37300
   },
   "service": {
     "spacebro":{
-      "host": "spacebro.space",
-      "port": 3333,
+      "host": "localhost",
+      "port": 36000,
       "channelName": "media-stream",
       "client": {
-        "name": "themifybro",
-        "description": "Add meta in media based on an online theme",
+        "name": "rsyncbro",
+        "description": "Rsync file to distant folder",
         "in": {
           "inMedia": {
             "eventName": "inMedia",
@@ -28,11 +28,5 @@
       }
     }
   },
-  "theme": {
-    "baseURL": "https://socialite-demo.estu.la/themes",
-    "isAPI": false
-  },
-  "media": {
-    "meta": {}
-  }
+  "destination": "192.168.2.1"
 }
