@@ -10,7 +10,25 @@ galaxy](https://github.com/spacebro/)
 Sometimes you want all the media from a collection to be sent to a
 remove computer.
 rsyncbro sends all files to the same folder in the remote computer.
-All you have to do is set the name of the remove computer in settings
+All you have to do is set the name of the remote computer in settings
+
+Input media:
+
+```
+{
+  path: '/home/user/photos/myphoto.jpg',
+}
+```
+
+The app will attempt to copy the file to the server mentioned in
+settings.destination at the same path. That would be the following rsync
+command:
+
+```
+
+rsync -Paur /home/user/photos/myphoto.jpg destination:/home/user/photos/myphoto.jpg
+
+```
 
 ## 🌍 Installation
 

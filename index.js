@@ -14,8 +14,9 @@ spacebroClient.on(settings.service.spacebro.client.in.inMedia.eventName, media =
     var rsync = new Rsync()
       .shell('ssh')
       .flags('Paur')
+      .set('relative')
       .source(media.path)
-      .destination(settings.destination + ':' + media.path)
+      .destination(settings.destination + ':/')
     console.log('Sending to ' + settings.destination + ':' + media.path)
 
     // execute with stream callbacks
@@ -29,12 +30,10 @@ spacebroClient.on(settings.service.spacebro.client.in.inMedia.eventName, media =
       data = data.toString('utf-8')
       console.log('File ' + media.path + ' progress')
       console.log(data)
-        // do things like parse progress
     }, function (data) {
       data = data.toString('utf-8')
       console.log('File ' + media.path + ' error')
       console.log(data)
-        // do things like parse error output
     }
     )
   }
